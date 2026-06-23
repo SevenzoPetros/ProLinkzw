@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us — Get a Free Consultation",
   description:
-    "Get in touch with ProLinkzw Digital via WhatsApp, email or our contact form. Based in Harare, Zimbabwe, serving SMEs locally and internationally.",
+    "Get in touch with ProLinkzw Digital via WhatsApp, email or our contact form. Based in Gweru, Zimbabwe, serving SMEs locally and internationally.",
   path: "/contact",
 });
 

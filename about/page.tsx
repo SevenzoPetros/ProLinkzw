@@ -21,7 +21,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About us"
-        title="A Harare-based team building digital infrastructure for Zimbabwean SMEs"
+        title="A Gweru-based team building digital infrastructure for Zimbabwean SMEs"
         description="From our first five-page website to a full-service technology partner — here's the story, the people and the principles behind it."
         breadcrumbs={[{ label: "About" }]}
       />

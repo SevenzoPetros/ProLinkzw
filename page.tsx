@@ -4,7 +4,6 @@ import { TrustedBy } from "@/components/sections/trusted-by";
 import { ServicesOverview } from "@/components/sections/services-overview";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { Stats } from "@/components/sections/stats";
-import { PortfolioShowcase } from "@/components/sections/portfolio-showcase";
 import { Testimonials } from "@/components/sections/testimonials";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { FaqSection } from "@/components/sections/faq";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <ServicesOverview />
       <WhyChooseUs />
       <Stats />
-      <PortfolioShowcase />
       <Testimonials />
       <ProcessTimeline />
       <FaqSection items={faqItems.slice(0, 6)} showViewAll />

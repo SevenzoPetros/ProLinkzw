@@ -16,6 +16,8 @@ import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { PageTransition } from "@/components/layout/page-transition";
 import { siteConfig } from "@/lib/site-config";
 import { organizationJsonLd } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -66,6 +68,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
           <WhatsAppButton />
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

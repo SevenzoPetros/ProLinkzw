@@ -1,21 +1,12 @@
 import { ImageResponse } from "next/og";
-import fs from "node:fs";
-import path from "node:path";
 import { siteConfig } from "@/lib/site-config";
 
 export const runtime = "nodejs";
-
-function getLogoDataUri() {
-  const filePath = path.join(process.cwd(), "public", "logo", "prolinkzw-dark.png");
-  const file = fs.readFileSync(filePath);
-  return `data:image/png;base64,${file.toString("base64")}`;
-}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get("title") ?? siteConfig.tagline;
   const eyebrow = searchParams.get("eyebrow") ?? "ProLinkzw Digital";
-  const logoSrc = getLogoDataUri();
 
   return new ImageResponse(
     (
@@ -40,9 +31,6 @@ export async function GET(request: Request) {
               "radial-gradient(circle at 85% 20%, rgba(200,118,42,0.25), transparent 55%), radial-gradient(circle at 10% 85%, rgba(27,156,130,0.22), transparent 50%)",
           }}
         />
-
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={logoSrc} alt="ProLinkzw Digital" height={56} style={{ objectFit: "contain" }} />
 
         <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 980 }}>
           <span
