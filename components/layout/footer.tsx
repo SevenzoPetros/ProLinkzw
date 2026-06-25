@@ -30,16 +30,27 @@ export function Footer() {
                 { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
                 { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
               ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 text-ink-muted transition-colors hover:border-copper-400 hover:text-copper-500 dark:border-white/10 dark:text-mist-300/80 dark:hover:border-copper-200 dark:hover:text-copper-200"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
+                href ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 text-ink-muted transition-colors hover:border-copper-400 hover:text-copper-500 dark:border-white/10 dark:text-mist-300/80 dark:hover:border-copper-200 dark:hover:text-copper-200"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ) : (
+                  <div
+                    key={label}
+                    aria-label={label}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 text-ink-muted/50 dark:border-white/10 dark:text-mist-300/40 cursor-not-allowed"
+                    title="Coming soon"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </div>
+                )
               ))}
             </div>
           </div>
