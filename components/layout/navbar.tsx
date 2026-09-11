@@ -28,7 +28,7 @@ export function Navbar() {
   // While unscrolled, the navbar is transparent over that dark band, so the
   // logo needs the dark-background lockup for contrast. Once scrolled past
   // it, the navbar gets a frosted background matching the active theme.
-  const logoVariant = !scrolled ? "dark" : resolvedTheme === "dark" ? "dark" : "light";
+  const logoVariant = "dark";
 
   return (
     <header
@@ -55,7 +55,7 @@ export function Navbar() {
                   "relative text-sm font-medium transition-colors",
                   scrolled
                     ? "text-ink-muted hover:text-ink dark:text-mist-300/80 dark:hover:text-mist-50"
-                    : "text-mist-300/80 hover:text-mist-50",
+                    : "text-mist-700 hover:text-mist-950 dark:text-mist-300/80 dark:hover:text-mist-50",
                   active && (scrolled ? "text-ink dark:text-mist-50" : "text-mist-50"),
                 )}
               >
