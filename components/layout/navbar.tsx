@@ -28,7 +28,7 @@ export function Navbar() {
   // While unscrolled, the navbar is transparent over that dark band, so the
   // logo needs the dark-background lockup for contrast. Once scrolled past
   // it, the navbar gets a frosted background matching the active theme.
-  const logoVariant = "dark";
+  const logoVariant = resolvedTheme === "light" ? "light" : "dark";
 
   return (
     <header
