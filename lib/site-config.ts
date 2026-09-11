@@ -24,10 +24,10 @@ export const siteConfig = {
     phone2: "tel:+263 713860948",
   },
   social: {
-    facebook: "",
-    instagram: "https://instagram.com/prolinkzw",
+    facebook: "https://www.facebook.com/profile.php?id=61591599786450",
+    instagram: "https://www.instagram.com/pro_linkzw/",
     linkedin: "https://www.linkedin.com/company/prolinkzw",
-    twitter: "https://x.com/prolinkzw",
+    tiktok: "https://www.tiktok.com/@prolinkzw",
   },
   stats: {
     projectsDelivered: 180,

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
+import { FaTiktok } from "react-icons/fa6";
 import { Logo } from "@/components/shared/logo";
 import { siteConfig } from "@/lib/site-config";
 import { serviceCategories } from "@/lib/data/services";
@@ -29,6 +30,7 @@ export function Footer() {
                 { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
                 { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
                 { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
+                { icon: FaTiktok, href: siteConfig.social.tiktok, label: "TikTok" },
               ].map(({ icon: Icon, href, label }) => (
                 href ? (
                   <a

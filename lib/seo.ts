@@ -87,7 +87,7 @@ export function organizationJsonLd() {
       siteConfig.social.facebook,
       siteConfig.social.instagram,
       siteConfig.social.linkedin,
-      siteConfig.social.twitter,
+      siteConfig.social.tiktok,
     ],
   };
 }

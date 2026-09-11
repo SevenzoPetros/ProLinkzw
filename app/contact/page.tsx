@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MessageCircle, Mail, MapPin, Phone, Facebook, Linkedin } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { FaTiktok } from "react-icons/fa6";
 import { PageHeader } from "@/components/shared/page-header";
 import { Reveal } from "@/components/shared/reveal";
 import { ContactForm } from "@/components/sections/contact-form";
@@ -102,24 +103,23 @@ export default function ContactPage() {
                 </li>
               </ul>
               <div className="mt-6 flex items-center gap-3 border-t border-ink/8 pt-5 dark:border-white/8">
-                <a
-                  href={siteConfig.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 text-ink-muted transition-colors hover:border-copper-400 hover:text-copper-500 dark:border-white/10 dark:text-mist-300/80"
-                >
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a
-                  href={siteConfig.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 text-ink-muted transition-colors hover:border-copper-400 hover:text-copper-500 dark:border-white/10 dark:text-mist-300/80"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
+                {[
+                  { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
+                  { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
+                  { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
+                  { icon: FaTiktok, href: siteConfig.social.tiktok, label: "TikTok" },
+                ].map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 text-ink-muted transition-colors hover:border-copper-400 hover:text-copper-500 dark:border-white/10 dark:text-mist-300/80"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
               </div>
             </Reveal>
           </div>
