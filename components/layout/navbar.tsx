@@ -14,10 +14,12 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
+    setMounted(true);
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll);
@@ -28,7 +30,7 @@ export function Navbar() {
   // While unscrolled, the navbar is transparent over that dark band, so the
   // logo needs the dark-background lockup for contrast. Once scrolled past
   // it, the navbar gets a frosted background matching the active theme.
-  const logoVariant = resolvedTheme === "light" ? "light" : "dark";
+  const logoVariant = mounted && resolvedTheme === "light" ? "light" : "dark";
 
   return (
     <header
