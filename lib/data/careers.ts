@@ -13,25 +13,6 @@ export type JobOpening = {
 
 export const jobOpenings: JobOpening[] = [
   {
-    slug: "frontend-developer",
-    title: "Frontend Developer",
-    department: "Web & Software",
-    type: "Full-time",
-    location: "Harare (hybrid)",
-    summary:
-      "Build and maintain client websites and web applications, working closely with design to ship clean, fast, accessible interfaces.",
-    responsibilities: [
-      "Implement responsive interfaces from design files for client websites and internal tools",
-      "Maintain and improve existing client sites, including performance and accessibility fixes",
-      "Collaborate with backend and design team members on new feature builds",
-    ],
-    requirements: [
-      "1–3 years building production websites or web apps",
-      "Strong HTML, CSS and modern JavaScript/TypeScript fundamentals",
-      "Experience with a component-based framework (React, Vue, or similar)",
-    ],
-  },
-  {
     slug: "social-media-strategist",
     title: "Social Media Strategist",
     department: "Digital Marketing",
