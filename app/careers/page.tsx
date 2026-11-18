@@ -25,18 +25,22 @@ export default function CareersPage() {
         breadcrumbs={[{ label: "Careers" }]}
       />
 
-      <section className="section-pad bg-mist dark:bg-night-200">
-        <div className="container">
-          <SectionHeading eyebrow="Open positions" title="Current openings" />
-          <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2" stagger={0.08}>
-            {jobOpenings.map((job) => (
-              <RevealItem key={job.slug}>
-                <CareerCard job={job} />
-              </RevealItem>
-            ))}
-          </RevealGroup>
-        </div>
-      </section>
+      
+
+{jobOpenings.length > 0 && (
+  <section className="section-pad bg-mist dark:bg-night-200">
+    <div className="container">
+      <SectionHeading eyebrow="Open positions" title="Current openings" />
+      <RevealGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2" stagger={0.08}>
+        {jobOpenings.map((job) => (
+          <RevealItem key={job.slug}>
+            <CareerCard job={job} />
+          </RevealItem>
+        ))}
+      </RevealGroup>
+    </div>
+  </section>
+)}
 
       <section className="section-pad bg-mist-100 dark:bg-night-100">
         <div className="container grid gap-6 lg:grid-cols-2">
@@ -100,3 +104,4 @@ export default function CareersPage() {
     </>
   );
 }
+
